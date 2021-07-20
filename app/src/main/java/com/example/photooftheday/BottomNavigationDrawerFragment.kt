@@ -17,7 +17,8 @@ class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.bottom_navigation_layout, container, false)
+        _binding = BottomNavigationLayoutBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,3 +33,5 @@ class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
         }
     }
 }
+
+

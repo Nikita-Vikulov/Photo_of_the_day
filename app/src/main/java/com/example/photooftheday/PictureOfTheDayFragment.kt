@@ -40,11 +40,6 @@ class PictureOfTheDayFragment : Fragment() {
         return binding.root
     }
 
-    /*   override fun onActivityCreated(savedInstanceState: Bundle?) {
-           super.onActivityCreated(savedInstanceState)
-           viewModel.getData()
-               .observe(viewLifecycleOwner, Observer<PictureOfTheDayData> { renderData(it) })
-       }*/
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getData().observe(
@@ -110,7 +105,7 @@ class PictureOfTheDayFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.app_bar_fav -> Toast.makeText(context, "Favourite", Toast.LENGTH_SHORT).show()
-            R.id.app_bar_settings -> activity?.supportFragmentManager?.beginTransaction()?.add(R.id.container, ChipsFragment())?.addToBackStack(null)?.commit()
+            R.id.app_bar_settings -> activity?.supportFragmentManager?.beginTransaction()?.add(R.id.container, MainActivity.SettingsFragment())?.addToBackStack(null)?.commit()
             android.R.id.home -> {
                 activity?.let {
                     BottomNavigationDrawerFragment().show(it.supportFragmentManager, "tag")

@@ -33,6 +33,7 @@
         <item name="materialButtonStyle">@style/AppButton</item>
         <item name="textInputStyle">@style/AppTextField</item>
         <item name="materialCardViewStyle">@style/AppCard</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="AppButton" parent="Widget.MaterialComponents.Button">
@@ -46,4 +47,6 @@
     <style name="AppCard" parent="Widget.MaterialComponents.CardView">
         <item name="cardElevation">8dp</item>
     </style>
+
+
 </resources>

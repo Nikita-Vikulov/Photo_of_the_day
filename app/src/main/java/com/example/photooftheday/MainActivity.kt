@@ -38,17 +38,6 @@ class MainActivity : AppCompatActivity() {
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
 
-           /* binding.changeThemeBtn.setOnCheckedChangeListener  { buttonView, isChecked ->
-                if (isChecked) {
-                    ThemeHolder.theme = R.style.PhotoOfTheDay
-                    requireActivity().recreate()
-                } else {
-                    ThemeHolder.theme = R.style.AppTheme
-                    requireActivity().recreate()
-                }
-
-            }*/
-
             binding.changeThemeBtn.setOnClickListener {
                 ThemeHolder.theme = if (true) {
                     R.style.PhotoOfTheDay
@@ -58,7 +47,12 @@ class MainActivity : AppCompatActivity() {
                 requireActivity().recreate()
             }
         }
+        override fun onDestroy() {
+            super.onDestroy()
+            _binding = null
+        }
     }
+
 }
 
 object ThemeHolder {

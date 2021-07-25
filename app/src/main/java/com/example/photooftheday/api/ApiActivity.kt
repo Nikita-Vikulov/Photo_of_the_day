@@ -1,17 +1,13 @@
 package com.example.photooftheday.api
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
 import com.example.photooftheday.R
 import com.example.photooftheday.databinding.ActivityApiBinding
-import com.example.photooftheday.databinding.MainFragmentBinding
 
 private const val EARTH = 0
 private const val MARS = 1

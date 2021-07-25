@@ -14,12 +14,13 @@ import com.example.photooftheday.databinding.MainFragmentBinding
 
 import coil.load
 import com.example.photooftheday.api.ApiActivity
+import com.example.photooftheday.databinding.FragmentMainStartBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 
 class PictureOfTheDayFragment : Fragment() {
-    private var _binding: MainFragmentBinding? = null
+    private var _binding: FragmentMainStartBinding? = null
     private val binding get() = _binding!!
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
@@ -37,7 +38,7 @@ class PictureOfTheDayFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = MainFragmentBinding.inflate(inflater, container, false)
+        _binding = FragmentMainStartBinding.inflate(inflater, container, false)
         return binding.root
     }
 

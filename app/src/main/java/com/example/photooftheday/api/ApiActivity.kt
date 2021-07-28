@@ -14,11 +14,12 @@ private const val MARS = 1
 private const val WEATHER = 2
 
 class ApiActivity : AppCompatActivity() {
-    private var _binding: ActivityApiBinding? = null
-    private val binding get() = _binding!!
+
+    private lateinit var binding: ActivityApiBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityApiBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_api)
         binding.viewPager.adapter = ViewPagerAdapter(supportFragmentManager)
         binding.tabLayout.setupWithViewPager(binding.viewPager)
@@ -61,6 +62,7 @@ class ApiActivity : AppCompatActivity() {
             }
         }
     }
+
 
     private fun setEarthTabHighlighted(layoutInflater: LayoutInflater) {
         val earth = layoutInflater.inflate(R.layout.activity_api_custom_tab_earth, null)
@@ -109,9 +111,5 @@ class ApiActivity : AppCompatActivity() {
         binding.tabLayout.getTabAt(WEATHER)?.customView = weather
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
 }
 

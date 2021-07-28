@@ -9,13 +9,25 @@ import com.example.photooftheday.databinding.ActivityApiBottomBinding
 
 
 class ApiBottomActivity : AppCompatActivity() {
-    private var _binding: ActivityApiBottomBinding? = null
-    private val binding get() = _binding!!
+
+    private lateinit var binding: ActivityApiBottomBinding
+   // private var _binding: ActivityApiBottomBinding? = null
+   // private val binding get() = _binding!!
+
+  /*  override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = ActivityApiBottomBinding.inflate(inflater, container, false)
+        return binding.root
+    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityApiBottomBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_api_bottom)
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.bottom_view_earth -> {
                     supportFragmentManager.beginTransaction()
@@ -49,7 +61,7 @@ class ApiBottomActivity : AppCompatActivity() {
         badge?.maxCharacterCount = 2
         badge?.number = 999
 
-        binding.bottomNavigationView.setOnNavigationItemReselectedListener { item ->
+        binding.bottomNavigationView.setOnItemReselectedListener { item ->
             when (item.itemId) {
                 R.id.bottom_view_earth -> {
                     //Item tapped

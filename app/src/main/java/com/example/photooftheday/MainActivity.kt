@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     class SettingsFragment : Fragment() {
         private var _binding: FragmentSettingsBinding? = null
         private val binding get() = _binding!!
-        private lateinit var changeThemeBtn: Button
 
         override fun onCreateView(
             inflater: LayoutInflater,

@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".api.ApiActivity"/>
         <activity android:name=".ApiBottomActivity"/>
+        <activity android:name=".animations.AnimationsActivity"/>
+        <activity android:name=".animations.AnimationsActivityEnlarge"/>
     </application>
 
 </manifest>

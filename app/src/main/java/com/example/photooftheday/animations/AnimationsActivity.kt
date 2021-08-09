@@ -12,10 +12,7 @@ import com.example.photooftheday.R
 import com.example.photooftheday.databinding.ActivityAnimationsFabBinding
 
 class AnimationsActivity : AppCompatActivity() {
-
-     private lateinit var binding: ActivityAnimationsFabBinding
- //   private var _binding: ActivityAnimationsFabBinding? = null
-   // private val binding get() = _binding!!
+    private lateinit var binding: ActivityAnimationsFabBinding
 
     private var isExpanded = false
 
@@ -23,7 +20,7 @@ class AnimationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAnimationsFabBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_animations_fab)
+        setContentView(binding.root)
         setFAB()
         binding.scrollView.setOnScrollChangeListener { _, _, _, _, _ ->
             binding.toolbar.isSelected = binding.scrollView.canScrollVertically(-1)

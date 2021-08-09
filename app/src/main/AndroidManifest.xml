@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/PhotoOfTheDay">
         <activity
-            android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +24,7 @@
         <activity android:name=".ApiBottomActivity"/>
         <activity android:name=".animations.AnimationsActivity"/>
         <activity android:name=".animations.AnimationsActivityEnlarge"/>
+        <activity android:name=".recycler.RecyclerActivity"/>
     </application>
 
 </manifest>

@@ -20,7 +20,7 @@ class ApiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityApiBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_api)
+        setContentView(binding.root)
         binding.viewPager.adapter = ViewPagerAdapter(supportFragmentManager)
         binding.tabLayout.setupWithViewPager(binding.viewPager)
         setHighlightedTab(EARTH)

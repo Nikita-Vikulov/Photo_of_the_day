@@ -12,6 +12,7 @@ import androidx.transition.TransitionSet
 
 import com.example.photooftheday.R
 import com.example.photooftheday.databinding.ActivityAnimationsEnlargeBinding
+import com.example.photooftheday.databinding.ActivityAnimationsFabBinding
 
 class AnimationsActivityEnlarge : AppCompatActivity() {
     private lateinit var binding: ActivityAnimationsEnlargeBinding
@@ -20,7 +21,7 @@ class AnimationsActivityEnlarge : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAnimationsEnlargeBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_animations_enlarge)
+        setContentView(binding.root)
         binding.imageView.setOnClickListener {
             isExpanded = !isExpanded
             TransitionManager.beginDelayedTransition(

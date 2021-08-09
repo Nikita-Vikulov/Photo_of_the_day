@@ -26,7 +26,7 @@ class ApiBottomActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityApiBottomBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_api_bottom)
+        setContentView(binding.root)
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.bottom_view_earth -> {

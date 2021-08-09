@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.photooftheday.animations.AnimationsActivity
 import com.example.photooftheday.animations.AnimationsActivityEnlarge
 import com.example.photooftheday.databinding.BottomNavigationLayoutBinding
+import com.example.photooftheday.recycler.RecyclerActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
@@ -41,6 +42,14 @@ class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
                         Intent(
                             it,
                             AnimationsActivityEnlarge::class.java
+                        )
+                    )
+                }
+                R.id.navigation_three -> activity?.let {
+                    startActivity(
+                        Intent(
+                            it,
+                            RecyclerActivity::class.java
                         )
                     )
                 }

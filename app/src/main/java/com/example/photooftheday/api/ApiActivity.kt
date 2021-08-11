@@ -42,7 +42,6 @@ class ApiActivity : AppCompatActivity() {
 
     private fun setHighlightedTab(position: Int) {
         val layoutInflater = LayoutInflater.from(this@ApiActivity)
-
         binding.tabLayout.getTabAt(EARTH)?.customView = null
         binding.tabLayout.getTabAt(MARS)?.customView = null
         binding.tabLayout.getTabAt(WEATHER)?.customView = null
